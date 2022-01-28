@@ -1,0 +1,71 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    background-color: rgb(48, 8, 139);
+    color: rgb(220, 255, 25);
+}
+
+button:focus,
+input:focus {
+    outline: none;
+}
+
+.app {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 15px;
+
+    h1 {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .app__todo-item {
+        border: 1px solid rgb(220, 255, 25);
+        padding: 20px 40px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 25px 0;
+
+        span {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: text-decoration .1s linear,
+            color .1s linear;
+
+            input {
+                margin-right: 10px;
+            }
+        }
+
+        span.done {
+            text-decoration: line-through;
+            color: firebrick;
+        }
+
+        button {
+            background: transparent;
+            outline: none;
+            border: 1px solid rgb(220, 255, 25);
+            color: rgb(220, 255, 25);
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+    }
+}
+
