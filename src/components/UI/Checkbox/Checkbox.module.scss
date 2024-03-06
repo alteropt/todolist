@@ -1,0 +1,26 @@
+@import '/src/global-styles/variables';
+
+.checkbox {
+    width: 35px;
+    height: 35px;
+
+    border-radius: 6px;
+    background: $cLightBg;
+    border: 1px solid $cLightBg;
+
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkbox-checked {
+    background-color: #23ff65;
+
+    svg {
+        font-size: 24px;
+        color: #078337;
+    }
+}
+

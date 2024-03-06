@@ -1,0 +1,38 @@
+@import 'src/global-styles/variables';
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: $cWhite;
+    background-color: $cAccent;
+    cursor: pointer;
+    border-radius: 4px;
+    border: 2px solid $cAccent;
+
+    font-weight: 500;
+    font-size: 16px;
+
+    padding: 8px 20px;
+
+    transition: background-color .3s linear,
+    color .3s linear;
+
+    &:hover {
+        color: $cAccent;
+        background-color: transparent;
+    }
+}
+
+.disabled {
+    background-color: $cGray;
+    color: $cText;
+    border: 2px solid darken($cGray, 10%);
+
+    &:hover {
+        color: $cText;
+        background-color: darken($cGray, $amount: 10%);
+    }
+}
+

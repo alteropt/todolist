@@ -1,0 +1,21 @@
+@import 'src/global-styles/variables';
+
+.select {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: $cAccent;
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 4px;
+    border: 2px solid $cAccent;
+
+    font-weight: 500;
+    font-size: 16px;
+
+    padding: 8px 20px;
+
+    user-select: none;
+}
+

@@ -1,0 +1,31 @@
+@import './variables';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: $cText;
+    background-color: $cBg;
+}
+
+a {
+    text-decoration: none;
+    color: $cText;
+}
+
+button, input, select {
+    outline: none;
+    background: transparent;
+    border: none;
+    font-family: "Open Sans", sans-serif;
+}
+
+ul {
+    list-style-type: none;
+}
