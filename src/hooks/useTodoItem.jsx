@@ -38,6 +38,9 @@ export const useTodoList = (todos, setTodos, setCurrentModalFormValue) => {
     const todosCopy = [...todos]
     const currentTodo = todosCopy.find(todo => todoId === todo.id)
     currentTodo.isCompleted = !currentTodo.isCompleted
+    if(currentTodo.isCompleted) {
+      currentTodo.doneAt = getDateInNormalFormat()
+    }
     setTodos(todosCopy)
 
     window.localStorage.setItem('todos', JSON.stringify(todosCopy))
@@ -47,7 +50,7 @@ export const useTodoList = (todos, setTodos, setCurrentModalFormValue) => {
     const todosCopy = [...todos]
     const newTodos = todosCopy.filter(todo => todo.id !== todoId) 
     setTodos(newTodos)
-    window.localStorage.setItem('todos', newTodos)
+    window.localStorage.setItem('todos', JSON.stringify(newTodos))
   }
 
   return {

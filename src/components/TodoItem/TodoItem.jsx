@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import Checkbox from '../UI/Checkbox/Checkbox';
 import { FaTrash } from "react-icons/fa6";
 import { RiPencilFill } from "react-icons/ri";
@@ -13,7 +13,7 @@ const TodoItem = ({todo, setModalFormType, ...props}) => {
     const [isDone, setIsDone] = useState(todo.isCompleted)
 
     const [todoCompleteHandle, todoDeleteHandle, todoGetCurrent, todoGetTitle] = useTodoHandlersContext()
-    const [modalOpen, setModalOpen] = useModalHandlerContext()
+    const [, setModalOpen] = useModalHandlerContext()
 
     const onTodoCompleteChange = () => {
         setIsDone(prev => !prev)
@@ -35,7 +35,7 @@ const TodoItem = ({todo, setModalFormType, ...props}) => {
                 />
                 <div className={classes.todo__text}>
                     <div className={classNames(classes.todo__title, (isDone && classes.done))}>{todo.title}</div>
-                    <div className={classes.todo__date}>Created at {todo.createdAt} {isDone && ('| Done at ' + getDateInNormalFormat())}</div>
+                    <div className={classes.todo__date}>Created at {todo.createdAt} {isDone && ('| Done at ' + todo.doneAt)}</div>
                 </div>
             </div>
             <div className={classes.todo__buttons}>
